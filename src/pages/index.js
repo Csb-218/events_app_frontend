@@ -7,7 +7,6 @@ const inter = Inter({ subsets: ['latin'] })
 
 export async function getServerSideProps(){
 
-  //const {events_categories} = await import('data/data.json')
   const response = await axios.get(process.env.NEXT_PUBLIC_ENV_LOCAL_VARIABLE_1);
 
   const events_catagories = response.data;
@@ -31,9 +30,6 @@ export default function Home({data}) {
       <div className='mt-24'>
         <Home_ data={data} />
       </div>
-      
-
-      
     </>
   )
 }

@@ -13,7 +13,7 @@ export async function getStaticProps(){
   }
 } 
 
-const EventsPage = ({data}) =>{//console.log(data)
+const EventsPage = ({data}) =>{
     return (
       <main className='text-center mt-28 ' >
         <h1 className='text-5xl font-serif '>
@@ -21,16 +21,7 @@ const EventsPage = ({data}) =>{//console.log(data)
         </h1>
 
         <Home_ data={data} />
-        {/* {
-          data.map((ev) =>
 
-            <Link key={ev.id} href={`/events/${ev.id}`}>
-              <Image width={600} height={600} alt={ev.title} src={ev.image} className='w-full' />
-              <h2>{ev.title}</h2>
-              <p>{ev.description}</p>
-            </Link>
-          )
-        } */}
       </main>
     )
 

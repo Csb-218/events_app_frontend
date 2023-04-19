@@ -7,12 +7,10 @@ import axios from 'axios';
 
 const SingleEventPage =({data}) => {
     const router = useRouter();
-    //console.log(router);
 
     const onSubmit = async(val,{resetForm})=> { 
         const emailValue = val.email;
         const eventId = router.query.id;
-        //console.log(eventId,emailValue);
 
         try{
             const response = await fetch('/api/email-registration',{
@@ -57,7 +55,7 @@ const SingleEventPage =({data}) => {
                                 <Field name='email' type='email' className='bg-inherit text-inherit w-4/5 lg:w-auto  px-1 border-[0.5px] rounded ' />
                                 <ErrorMessage name='email' component={error_text}/>
                                 <button type='submit' 
-                                className={(!formik.isValid || formik.isSubmitting)|| !formik.dirty?'rounded p-1 mx-1  cursor-not-allowed ':'rounded p-1 mx-1 my-2 hover:text-black hover:bg-white w-4/5 lg:w-auto'}
+                                className={(!formik.isValid || formik.isSubmitting)|| !formik.dirty?'rounded p-1 mx-1 my-2 w-4/5 lg:w-auto cursor-not-allowed bg-zinc-900':'rounded p-1 mx-1 my-2 w-4/5 lg:w-auto bg-white text-black'}
                                 disabled={(!formik.isValid || formik.isSubmitting) || !formik.dirty}> Submit </button>
                             </Form>
                         )
@@ -91,7 +89,6 @@ export async function getStaticPaths(){
 }
 
 export async function getStaticProps(context){
-    //console.log(context);
     const id = context.params.id;
     const response = await axios.get(process.env.NEXT_PUBLIC_ENV_LOCAL_VARIABLE_2);
     const allEvents = response.data;
