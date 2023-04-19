@@ -54,7 +54,7 @@ const SingleEventPage =({data}) => {
                         return(
                             <Form className=' flex lg:flex-row flex-col items-center justify-center '>
                                 <label>Sign up for event : </label>
-                                <Field name='email' type='email' className='bg-black text-white w-4/5 lg:w-auto  px-1 border-[0.5px] rounded ' />
+                                <Field name='email' type='email' className='bg-inherit text-inherit w-4/5 lg:w-auto  px-1 border-[0.5px] rounded ' />
                                 <ErrorMessage name='email' component={error_text}/>
                                 <button type='submit' 
                                 className={(!formik.isValid || formik.isSubmitting)|| !formik.dirty?'rounded p-1 mx-1  cursor-not-allowed ':'rounded p-1 mx-1 my-2 hover:text-black hover:bg-white w-4/5 lg:w-auto'}

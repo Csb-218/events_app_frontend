@@ -111,7 +111,7 @@ a {
 @tailwind utilities;
 
 .dropdown-content{
-  @apply flex flex-col bg-opacity-70 bg-black shadow-lg  p-5 border-[0.5px]  rounded-lg w-[460px] absolute right-3
+  @apply flex flex-col bg-opacity-70 bg-black shadow-lg  p-5 border-[0.5px]  rounded-lg w-screen absolute -right-2 
 }
 .dropdown{
   @apply relative right-2 top-3 lg:hidden
