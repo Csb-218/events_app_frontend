@@ -11,7 +11,7 @@ function Header() {
     <nav className='flex flex-row fixed w-full top-0 lg:px-5 justify-between bg-black '>
       <Image width={50} height={50} src='/images/curve.png' alt='xyz' className='bg-white mt-4 ml-4'></Image>
 
-      <div className='dropdown' onMouseEnter={()=>setState('dropdown-content')} onMouseLeave={()=>setState('hidden')}>
+      <div className='dropdown'  onClick={state==='hidden'?()=>setState('dropdown-content'):()=>setState('hidden')}>
           <button className=''>
             <Image src={menuIcon} alt='xyz' className='w-10 h-10 my-2 mx-2' ></Image>
           </button>
