@@ -12,7 +12,7 @@ export async function getServerSideProps(){
   const events_catagories = response.data;
   return{
     props:{
-      data:events_catagories
+      data:events_catagories  
     }
   }
 }
